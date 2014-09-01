@@ -10,23 +10,37 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <commons/string.h>
 #include "ejercicios.h"
 
 
 
 
 int main(void){
-
-	//Ejercicio 1
 	char* hola = "Hola";
 	char* op ="operativos";
+
+//Ejercicio 1.1
 	char* devol;
 	devol = string_concat(hola, op);
-	printf ("%s", devol);
+	printf ("%s ", devol);
 	free (devol);
-	char** con = "null";
-	string_concat_dinamyc(hola, op, con);
+//Ejercicio 1.2
+
+	char* con= malloc (sizeof (hola) + sizeof (op));
+	string_concat_dinamyc(hola, op, &con);
+	free (con);
+
+	//Ejercicio 1.3
+/*	char** user;
+	user = malloc (20);
+	char* dominio = malloc (20);
+	char* mail= malloc(20);
+	mail = "ayelenmacarenagarcia@gmail.com";
+	mail_split (mail, &user, &dominio);
+	printf ("%d \n", user);
+	printf ("%d \n",dominio);
+	free (user,dominio,mail);
+*/
 	return 0;
 }
 
