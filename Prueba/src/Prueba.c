@@ -41,6 +41,9 @@ int main(void){
 	printf ("%d \n",dominio);
 	free (user,dominio,mail);
 */
+
+	// Aca deberia ir el codigo correspondiente al ejercicio 3
+
 	return 0;
 }
 
